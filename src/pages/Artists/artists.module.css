@@ -77,7 +77,6 @@
 
 @media (max-width: 480px) {
   .artistsWrapper {
-    grid-template-columns: 1fr;
     width: 100%;
     padding: 10px;
     margin: auto;
