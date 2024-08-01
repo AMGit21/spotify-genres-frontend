@@ -1,0 +1,91 @@
+* {
+  font-family: "Calibri", sans-serif;
+}
+
+.genresPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 80vh;
+  margin: 50px auto 10px auto;
+  padding: 10px;
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 10px;
+}
+
+.genresPage h2 {
+  color: white;
+}
+.genresWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* Link styles for genre cards */
+.linkLabel {
+  text-decoration: none;
+  color: inherit; /* Inherit text color */
+  display: block; /* Make the link block-level */
+}
+/* Loading and error messages */
+.loading,
+.error,
+.noData {
+  color: #ffffff; /* White color for text */
+  font-size: 1.5rem; /* Larger font size */
+  margin-top: 50px; /* Space above the message */
+  text-align: center; /* Center align text */
+}
+
+.loading {
+  color: #8ae6ff; /* Light blue for loading */
+}
+
+.error {
+  color: #ff6f6f; /* Light red for error */
+}
+
+.noData {
+  color: #ff6f6f; /* Light red for no data */
+  margin-top: 20px; /* Space above the message */
+}
+
+/* Scrollbar styling for genresWrapper */
+.genresWrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.genresWrapper::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+/* .genresWrapper::-webkit-scrollbar-track {
+  background-color: #1a1a1a;
+} */
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .genresPage {
+    width: 90%;
+    padding: 15px;
+  }
+  .genresWrapper {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .genresWrapper {
+    grid-template-columns: 1fr; /* Single column layout */
+    padding: 10px;
+  }
+}

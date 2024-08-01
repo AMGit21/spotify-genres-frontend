@@ -1,0 +1,85 @@
+.artistsWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  justify-content: center;
+  padding: 10px;
+  width: 72%;
+  height: 70vh;
+  margin: 80px auto 30px auto;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.artistsWrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.artistsWrapper::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.artistsWrapper::-webkit-scrollbar-track {
+  background-color: #1a1a1a;
+}
+.linkLabel {
+  text-decoration: none;
+}
+
+.loading,
+.error,
+.noArtists {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.loading {
+  color: #8ae6ff;
+}
+
+.error {
+  color: #ff6f6f;
+}
+
+.noArtists {
+  color: #ff6f6f;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.pagination button {
+  background-color: #1a1a1a;
+  color: white;
+  border: 1px solid #ff6f6f;
+  padding: 10px 15px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.pagination button:disabled {
+  background-color: #333;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  color: white;
+  font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  .artistsWrapper {
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+  }
+}
