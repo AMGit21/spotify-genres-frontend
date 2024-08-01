@@ -43,8 +43,8 @@ To set up and run this project locally, follow these steps:
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/AMGit21/spotify-genres-frontend.git
-   cd spotify-genres-frontend
+   git clone https://github.com/AMGit21/spotifyGenresArtists-GeminiChat-frontend.git
+   cd spotifyGenresArtists-GeminiChat-frontend
    ```
 2. **Install dependencies:**
    ```sh
@@ -71,7 +71,7 @@ The application will interact with the backend to fetch responses and display th
 ## Folder Structure
 
 ```
-spotify-genres-frontend/
+spotifyGenresArtists-GeminiChat-frontend/
 ├── public/
 │   └── index.html
 ├── src/
@@ -127,7 +127,5 @@ The data is used to provide accurate and up-to-date information about artists.
 ## Thank You
 
 Thank you for checking out this project. Feel free to reach out if you have any questions or feedback.
-
-```
 
 ```
