@@ -4,7 +4,7 @@ import useFetch from "../../hooks/useFetch";
 import Artist from "../../components/Artist";
 import NavbarArtists from "../../components/NavbarArtists";
 import styles from "./artists.module.css";
-import defaultImg from "../../assets/imgs/img1.jpg"; // Placeholder image
+import defaultImg from "../../assets/imgs/defaultImg.jpg"; // Placeholder image
 
 const Index = () => {
   const { genreId } = useParams();

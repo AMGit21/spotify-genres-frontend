@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: black;
+  color: #333;
+  font-family: "Arial", sans-serif;
+}
+
+.error {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #ff6b6b;
+}
+
+.message {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}

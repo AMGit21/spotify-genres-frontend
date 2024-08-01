@@ -1,70 +1,133 @@
-# Getting Started with Create React App
+### Frontend README
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the frontend part of the assignment.
+The frontend is built with React and interacts with the backend to provide a chat interface for users to get information about artists.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup and Installation](#setup-and-installation)
+- [Running the Application](#running-the-application)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
+- [Fetching Data from Spotify](#fetching-data-from-spotify)
+- [Thank You](#thank-you)
 
-### `npm start`
+## Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The frontend application allows users to chat with an AI about various artists.
+It provides an interface to send and receive messages, and it caches the chat history locally for persistence.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- Chat interface for interacting with AI
+- Persistent chat history using local storage
+- File attachment support (as a future work)
+- Responsive design
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- React
+- React Router
+- UUID
+- Axios
+- CSS Modules
+- Gemini API (with specific customization)
+- Spotify API
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup and Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To set up and run this project locally, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/AMGit21/spotify-genres-frontend.git
+   cd spotify-genres-frontend
+   ```
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
 
-### `npm run eject`
+## Running the Application
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To start the development server, run:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This will start the application on http://localhost:3000.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Usage
 
-## Learn More
+Open the application in your browser: http://localhost:3000.
+After running the server side:
+Use the chat interface to view the artists genres and to ask questions about them.
+The application will interact with the backend to fetch responses and display them in the chat.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Folder Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+spotify-genres-frontend/
+├── public/
+│   └── index.html
+├── src/
+│   ├── assets/
+│   │   ├── imgs/
+│   │   |   └── defaultImg.jpg
+│   ├── components/
+│   │   ├── Artist/
+│   │   |   ├── index.js
+│   │   |   └── artist.module.css
+│   │   ├── GenreCard/
+│   │   |   ├── index.js
+│   │   |   └── genreCard.module.css
+│   │   ├── NavbarArtists/
+│   │   |   ├── index.js
+│   │   |   └── navbarArtists.module.css
+│   │   └── NavbarChat/
+│   │       ├── index.js
+│   │       └── navbarChat.module.css
+│   ├── hooks/
+│   │   ├── useFetch.js
+│   │   └── usePost.js
+│   ├── pages/
+│   │   ├── Artists/
+│   │   |   ├── Index.js
+│   │   |   └── artists.module.css
+│   │   ├── Chat/
+│   │   |   ├── Index.js
+│   │   |   └── chat.module.css
+│   │   ├── Genres/
+│   │   |   ├── Index.js
+│   │   |   └── genres.module.css
+│   │   └── NoPage/
+│   │       ├── index.js
+│   │   |   └── noPage.module.css
+│   ├── utils/
+│   │   ├── cacheData.js
+│   │   └── fetchDataFromApi.js
+│   │   └── fetchPostDataFromApi.js
+│   │   └── getCachedData.js
+│   ├── App.css
+│   ├── App.js
+│   └── index.js
+├── package.json
+└── README.md
+```
 
-### Code Splitting
+## Fetching Data from Spotify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The application fetches genres and artists data from the Spotify API to enhance the chat experience.
+The data is used to provide accurate and up-to-date information about artists.
 
-### Analyzing the Bundle Size
+## Thank You
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Thank you for checking out this project. Feel free to reach out if you have any questions or feedback.
 
-### Making a Progressive Web App
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
